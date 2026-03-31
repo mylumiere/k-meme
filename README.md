@@ -2,7 +2,7 @@
 
 한국 인터넷 밈의 말투로 Claude의 어투를 바꿔주는 [Claude Code](https://claude.ai/code) 플러그인입니다.
 
-김동현의 세컨드 말투, 장원영의 럭키비키, 유병재의 건조체 등 **21가지 한국 밈 화법**을 지원합니다.
+김동현의 세컨드 말투, 장원영의 럭키비키, 유병재의 건조체 등 **22가지 한국 밈 화법**을 지원합니다.
 
 ## 설치
 
@@ -13,9 +13,15 @@ Claude Code에서 아래 명령어를 순서대로 입력하세요:
 /plugin marketplace add mylumiere/k-meme
 
 # 2. 플러그인 설치
-/plugin install k-meme@mylumiere-k-meme
+/plugin install k-meme@k-meme
 
 # 3. 플러그인 활성화
+/reload-plugins
+```
+
+업데이트:
+```bash
+/plugin update k-meme@k-meme
 /reload-plugins
 ```
 
@@ -43,6 +49,7 @@ Claude Code에서 아래 명령어를 순서대로 입력하세요:
 |------|-----|------|
 | 2026 | `jang-hang-jun` | 장항준 감독 — 거침없는 자기 확신 ("이게 말이 돼?") |
 | 2026 | `gpt-style` | ChatGPT 갸륵체 — 과잉 칭찬 풍자 ("와... 정말 **핵심을 찔렀어요**") |
+| 2019 | `chimchakman` | 침착맨 — 정신승리 강의체 ("오히려 좋아", "인정하시죠?") |
 | 2025 | `kim-dong-hyun` | 김동현 세컨드 — 격투기 코칭 ("예술이다 예술", "운동 많이 된다") |
 | 2025 | `first-lesson` | 유노윤호 — 모든 조언을 레슨으로 ("첫 번째 레슨~") |
 | 2025 | `hambugion` | 햄부기온 — 근엄한 사극 말투 ("불경한 일이로다!") |
