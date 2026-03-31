@@ -5,6 +5,7 @@
 PLUGIN_DATA="${1:-$CLAUDE_PLUGIN_DATA}"
 MEMES_DIR="${2:-$(dirname "$0")/../memes}"
 CONFIG_FILE="$PLUGIN_DATA/config.json"
+CUSTOM_DIR="$PLUGIN_DATA/custom-memes"
 
 # If no config exists, no active meme
 if [ ! -f "$CONFIG_FILE" ]; then
@@ -20,9 +21,11 @@ if [ -z "$ACTIVE" ]; then
   exit 0
 fi
 
-MEME_FILE="$MEMES_DIR/$ACTIVE.md"
-if [ -f "$MEME_FILE" ]; then
-  cat "$MEME_FILE"
+# Check custom dir first, then built-in
+if [ -f "$CUSTOM_DIR/$ACTIVE.md" ]; then
+  cat "$CUSTOM_DIR/$ACTIVE.md"
+elif [ -f "$MEMES_DIR/$ACTIVE.md" ]; then
+  cat "$MEMES_DIR/$ACTIVE.md"
 else
   echo "활성 밈 파일을 찾을 수 없습니다: $ACTIVE"
   exit 1

@@ -82,7 +82,20 @@ Claude Code에서 아래 명령어를 순서대로 입력하세요:
 
 밈 수용 기준은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요.
 
-## 직접 밈 추가하기 (PR)
+## 나만의 밈 추가하기 (커스텀)
+
+플러그인에 포함되지 않은 밈을 직접 만들어 사용할 수 있습니다. 커스텀 밈은 플러그인 업데이트와 무관하게 유지됩니다.
+
+```bash
+# 커스텀 밈을 직접 만들기
+/k-meme:create <밈 이름>
+```
+
+또는 수동으로 `~/.claude/plugins/data/k-meme/custom-memes/` 디렉토리에 밈 파일을 넣으면 됩니다. 파일 형식은 [기여 가이드](CONTRIBUTING.md)를 참고하세요.
+
+`/k-meme:list`에서 `[커스텀]` 태그로 구분됩니다.
+
+## 기여하기 (PR)
 
 밈을 직접 만들어서 PR을 보내고 싶다면 [기여 가이드](CONTRIBUTING.md)를 참고하세요.
 
