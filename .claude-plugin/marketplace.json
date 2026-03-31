@@ -1,0 +1,14 @@
+{
+  "name": "k-meme",
+  "description": "한국 인터넷 밈의 말투로 Claude의 어투를 바꿔주는 플러그인",
+  "owner": {
+    "name": "mylumiere"
+  },
+  "plugins": [
+    {
+      "name": "k-meme",
+      "source": "./",
+      "description": "한국 인터넷 밈/유행어로 Claude의 어투를 바꿔주는 플러그인. 김동현, 장원영, 유병재 등 21가지 밈 화법 지원."
+    }
+  ]
+}
