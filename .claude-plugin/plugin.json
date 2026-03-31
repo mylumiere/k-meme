@@ -1,6 +1,6 @@
 {
   "name": "k-meme",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "대한민국 밈/인터넷 유행어로 Claude의 어투를 바꿔주는 플러그인",
   "author": {
     "name": "kakao"
