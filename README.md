@@ -6,9 +6,17 @@
 
 ## 설치
 
+Claude Code에서 아래 명령어를 순서대로 입력하세요:
+
 ```bash
-# Claude Code에서
-/install-plugin https://github.com/kakao/k-meme
+# 1. 마켓플레이스 추가 (처음 한 번)
+/plugin marketplace add mylumiere/k-meme
+
+# 2. 플러그인 설치
+/plugin install k-meme@mylumiere-k-meme
+
+# 3. 플러그인 활성화
+/reload-plugins
 ```
 
 ## 사용법
