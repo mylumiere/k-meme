@@ -23,7 +23,7 @@ argument-hint: <meme-name>
 3. 활성화 성공 시, 밈 정의를 로드합니다:
 
 ```
-!`cat "${CLAUDE_PLUGIN_ROOT}/memes/$ARGUMENTS.md"`
+!`cat "${CLAUDE_PLUGIN_DATA}/custom-memes/$ARGUMENTS.md" 2>/dev/null || cat "${CLAUDE_PLUGIN_ROOT}/memes/$ARGUMENTS.md"`
 ```
 
 4. **이전에 활성화된 밈이 있으면 즉시 해제합니다.** 이전 밈의 어휘 사전, 말투 규칙, 변환 방식을 모두 무시하고, 새로 로드한 밈만 적용합니다. 한 번에 하나의 밈만 사용합니다. 절대로 두 개 이상의 밈을 동시에 적용하지 않습니다.
