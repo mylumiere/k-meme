@@ -17,13 +17,13 @@ argument-hint: <meme-name>
 2. 밈 이름이 있으면 해당 밈 파일을 읽어서 보여줍니다:
 
 ```
-!`cat "${CLAUDE_PLUGIN_ROOT}/memes/$ARGUMENTS.md" 2>/dev/null || echo "NOT_FOUND"`
+!`cat "${CLAUDE_PLUGIN_DATA}/custom-memes/$ARGUMENTS.md" 2>/dev/null || cat "${CLAUDE_PLUGIN_ROOT}/memes/$ARGUMENTS.md" 2>/dev/null || echo "NOT_FOUND"`
 ```
 
 3. NOT_FOUND가 반환되면 밈을 찾을 수 없다고 안내하고, 사용 가능한 밈 목록을 보여줍니다:
 
 ```
-!`ls "${CLAUDE_PLUGIN_ROOT}/memes/"*.md 2>/dev/null | xargs -I{} basename {} .md`
+!`ls "${CLAUDE_PLUGIN_ROOT}/memes/"*.md "${CLAUDE_PLUGIN_DATA}/custom-memes/"*.md 2>/dev/null | xargs -I{} basename {} .md | sort -u`
 ```
 
 4. 밈 파일이 있으면 내용을 보기 좋게 정리해서 보여줍니다:
